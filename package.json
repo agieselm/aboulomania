@@ -1,0 +1,21 @@
+{
+  "name": "aboulomania",
+  "version": "1.0.0",
+  "description": "An engine to help with the touch decisions in your daily life",
+  "main": "app.js",
+  "author": "agieselm",
+  "license": "ISC",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/agieselm/aboulomania"
+  },
+  "bugs": {
+    "url": "https://github.com/agieselm/aboulomania/issues"
+  },
+  "dependencies": {
+    "express": "4.21.1"
+  }
+}
