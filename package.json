@@ -2,11 +2,24 @@
   "name": "aboulomania",
   "version": "1.0.0",
   "description": "An engine to help with the touch decisions in your daily life",
-  "main": "app.js",
   "author": "agieselm",
   "license": "ISC",
   "scripts": {
+    "build": "tsc",
+    "prepare": "husky install",
+    "start": "node build/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write",
+      "eslint --fix"
+    ]
   },
   "repository": {
     "type": "git",
@@ -16,6 +29,20 @@
     "url": "https://github.com/agieselm/aboulomania/issues"
   },
   "dependencies": {
-    "express": "4.21.1"
+    "express": "^4.21.1"
+  },
+  "devDependencies": {
+    "husky": "^8.0.0",
+    "eslint": "^9.16.0",
+    "prettier": "^3.4.1",
+    "typescript": "^5.7.2",
+    "@types/node": "^22.10.1",
+    "@types/express": "^5.0.0",
+    "lint-staged": "^15.2.10",
+    "typescript-eslint": "8.16.0",
+    "@typescript-eslint/eslint-plugin": "^8.16.0",
+    "@typescript-eslint/parser": "^8.16.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1"
   }
 }
